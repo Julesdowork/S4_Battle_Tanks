@@ -3,6 +3,7 @@
 //#include "Battle_Tanks.h"
 #include "TankPlayerController.h"
 #include "Runtime/Engine/Classes/GameFramework/Pawn.h"
+#include "Tank.h"
 
 void ATankPlayerController::BeginPlay()
 {
