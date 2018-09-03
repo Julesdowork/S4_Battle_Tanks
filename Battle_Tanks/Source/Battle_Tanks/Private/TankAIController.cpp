@@ -15,15 +15,13 @@ void ATankAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Get this tank
 	ATank* ControlledTank = Cast<ATank>(GetPawn());
-
-	// Get player controlled tank
 	ATank* PlayerTank = Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());
 
 	if (PlayerTank)
 	{
-		// TODO Move towards the player
+		// Move towards the player
+		MoveToActor(PlayerTank, AcceptanceRadius);	// TODO check radius is in cm
 
 		// Aim towards the player
 		ControlledTank->AimAt(PlayerTank->GetActorLocation());
