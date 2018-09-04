@@ -1,15 +1,23 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright OA515 Games
 
 //#include "Battle_Tanks.h"
 #include "TankPlayerController.h"
 #include "Runtime/Engine/Classes/GameFramework/Pawn.h"
 #include "Tank.h"
+#include "TankAimingComponent.h"
 
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	auto ControlledTank = GetControlledTank();
+	auto AimingComponent = GetControlledTank()->FindComponentByClass<UTankAimingComponent>();
+	if (AimingComponent)
+	{
+		FoundAimingComponent(AimingComponent);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Player controller can't find Aiming Component at Begin Play"));
+	}
 }
 
 void ATankPlayerController::Tick(float DeltaTime)
