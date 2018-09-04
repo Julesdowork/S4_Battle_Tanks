@@ -1,10 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright OA515 Games.
 
 #include "TankAIController.h"
 #include "Runtime/Engine/Classes/GameFramework/Pawn.h"
 #include "Runtime/Engine/Classes/GameFramework/Actor.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
 #include "Tank.h"
+// Depends on Movement component via pathfinding system
 
 void ATankAIController::BeginPlay()
 {
