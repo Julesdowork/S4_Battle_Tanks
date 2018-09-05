@@ -27,6 +27,9 @@ class BATTLE_TANKS_API UTankAimingComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	TSubclassOf<AProjectile> ProjectileBlueprint;
+
 	void BeginPlay() override;
 	
 	UFUNCTION(BlueprintCallable, Category = "Setup")
@@ -40,9 +43,6 @@ public:
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
 	EFiringState FiringState = EFiringState::Reloading;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Setup")
-	TSubclassOf<AProjectile> ProjectileBlueprint;
 
 private:
 	// Sets default values for this component's properties
