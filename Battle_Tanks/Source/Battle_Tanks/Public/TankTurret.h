@@ -6,7 +6,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "TankTurret.generated.h"
 
-UCLASS(meta = (BlueprintSpawnableComponent))
+UCLASS(Blueprintable, BlueprintType, meta = (BlueprintSpawnableComponent))
 class BATTLE_TANKS_API UTankTurret : public UStaticMeshComponent
 {
 	GENERATED_BODY()
