@@ -90,6 +90,19 @@ void UTankAimingComponent::Fire()
 	}
 }
 
+/*
+	oiasdjfoiawsjflasdndfclijasdopilfjasildjf
+	asdlifjaopdifjasldfjas
+	dfaskldfjqwopiijfa;sdflasjdfopiajsdf
+	asdfljwqaoidefjasiodfjoasjdfoiqjwwoeijfwaoijefopias
+	sa;jdfaosidjfpoqwjeoasjdflkajsdfa
+	sdflksjdfoiasjdfoqw
+	flaksdjfoiqjeoiqwjoeipfjosaipjdflajsdlf
+	qwefjjasoidfjpoqwjepojwqoijdflasjdlfkjasldfjasf
+	qwjfaoijdfoasjdpfiajsdofjas
+	fqwwleifjoiasdjfioasjdfpooasijefopqiwjef
+*/
+
 bool UTankAimingComponent::IsBarrelMoving()
 {
 	if (!ensure(Barrel)) { return false; }
